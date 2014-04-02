@@ -1,17 +1,17 @@
 cross_platform_sensor_system
 ============================
 
-##Introduction
+##1.Introduction
 This project is a demo system of cross-platform sensor network.
 
-##Project Structure
-###web server(php/apache/memcached/haproxy/mysql)
-###android app client(sensor&information delivery)
-###pc client(unix)(sensor&information delivery&management)
+##2.Project Structure
+###2.1.web server(php/apache/memcached/haproxy/mysql)
+###2.2.android app client(sensor&information delivery)
+###2.3.pc client(unix)(sensor&information delivery&management)
 
-##Related Sensors
-###Media and Camera
-###Location and GPS
-###Motion
-###Environment
-###Devices' status
+##3.Related Sensors
+###3.1.Media and Camera
+###3.2.Location and GPS
+###3.3.Motion
+###3.4.Environment
+###3.5.Devices' status
