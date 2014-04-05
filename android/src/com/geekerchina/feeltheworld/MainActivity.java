@@ -269,7 +269,7 @@ public class MainActivity extends Activity {
 		URL url = null;
 		try {
 			//url = new URL("https://certs.cac.washington.edu/CAtest/");
-			url = new URL("https://www.google.com/");
+			url = new URL("https://wx.qq.com/");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -282,6 +282,9 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 		urlConnection.setSSLSocketFactory(context.getSocketFactory());
+		
+		
+		
 		InputStream in = null;
 		try {
 			in = urlConnection.getInputStream();
@@ -301,12 +304,13 @@ public class MainActivity extends Activity {
 			e1.printStackTrace();
 		}
 		Log.d("sensor", tmp);
-	
 		
-		}
+		
+		
+		
 	
-			 
-           
+	}
+	        
     }  
 	}
 	
