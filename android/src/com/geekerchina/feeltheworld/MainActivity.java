@@ -22,6 +22,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
+import java.util.List;
 import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -43,7 +44,13 @@ import android.net.wifi.WifiConfiguration.Protocol;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.telephony.SmsMessage;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -56,20 +63,39 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+	private SensorManager sMgr;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button button1=(Button)findViewById(R.id.button1);
-		button1.setOnClickListener(new ssltest());
+		//Button button1=(Button)findViewById(R.id.button1);
+		//button1.setOnClickListener(new ssltest());
+		sMgr = (SensorManager)this.getSystemService(SENSOR_SERVICE);
+	      List<Sensor> list = sMgr.getSensorList(Sensor.TYPE_ALL);
+
+	      StringBuilder data = new StringBuilder();
+	      for(Sensor sensor: list){
+	         data.append(sensor.getName() + "\n");
+	         data.append(sensor.getVendor() + "\n");
+	         data.append(sensor.getVersion() + "\n");
+
+	   }
+	      TextView sensorsData = (TextView)findViewById(R.id.textView1);
+	      sensorsData.setMovementMethod(new ScrollingMovementMethod());
+
+	   sensorsData.setText(data);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
-	}
+
+	   @Override
+	   public boolean onCreateOptionsMenu(Menu menu) {
+	      // Inflate the menu; this adds items to the action bar if it is present.
+	      getMenuInflater().inflate(R.menu.activity_main, menu);
+	      return true;
+	   }
+
+	
+	
 	public static String convertStreamToString(InputStream inputStream) throws IOException {
         if (inputStream != null) {
             Writer writer = new StringWriter();
@@ -96,6 +122,12 @@ public class MainActivity extends Activity {
 	{
 		TextView textView1 = (TextView)findViewById(R.id.textView1);
 		textView1.setText("You become a TuHao!");
+//		SensorActivity SA;
+
+
+		   
+		
+		
 		Log.d("sensor", "we get it");
 		/*
 		HttpResponse response = null;
@@ -133,6 +165,14 @@ public class MainActivity extends Activity {
 		}
 		
 		*/
+		
+		
+		
+		
+		
+		
+		
+		
 		// Load CAs from an InputStream
 		// (could be from a resource or ByteArrayInputStream or ...)
 		CertificateFactory cf = null;
@@ -264,7 +304,9 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
+		
+		/*
 		// Tell the URLConnection to use a SocketFactory from our SSLContext
 		URL url = null;
 		try {
@@ -304,6 +346,9 @@ public class MainActivity extends Activity {
 			e1.printStackTrace();
 		}
 		Log.d("sensor", tmp);
+		*/
+		
+		
 		
 		
 		
