@@ -11,73 +11,69 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:maxLines="1000"
-        android:scrollbars="vertical"
-        android:text="@string/SensorsMonitor" />
+        android:text="@string/sensorsmonitor" />
+
+
 
     <TextView
         android:id="@+id/acceleration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sensorsmonitor"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
-        android:maxLines="1000"
-        android:scrollbars="vertical"
+		android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:text="@string/acceleration" />
 
     <TextView
         android:id="@+id/xaccel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/sensorsmonitor"
-        android:layout_below="@+id/acceleration"
-        android:layout_marginTop="20dp"
-        android:maxLines="1000"
-        android:scrollbars="vertical"
-        android:text="@string/SensorsMonitor" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="@string/missing" />
 
     <TextView
         android:id="@+id/yaccel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/xaccel"
-        android:layout_below="@+id/xaccel"
-        android:layout_marginTop="28dp"
-        android:maxLines="1000"
-        android:scrollbars="vertical"
-        android:text="@string/SensorsMonitor" />
+		android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/missing" />
 
     <TextView
         android:id="@+id/zaccel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/yaccel"
-        android:layout_centerVertical="true"
-        android:maxLines="1000"
-        android:scrollbars="vertical"
-        android:text="@string/SensorsMonitor" />
-
-    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:text="@string/missing" />
+        <TextView
         android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/zaccel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-        android:maxLines="1000"
-        android:scrollbars="vertical"
+        android:layout_marginTop="150dp"
         android:text="@string/temperature" />
 
     <TextView
         android:id="@+id/temperature_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/temperature"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:maxLines="1000"
-        android:scrollbars="vertical"
-        android:text="@string/temperature_show" />
+        android:layout_marginTop="175dp"
+        android:text="@string/missing" />
+    <TextView
+        android:id="@+id/gravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="@string/gravity" />
+    <TextView
+        android:id="@+id/gravity_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="225dp"
+        android:text="@string/missing" />
 
 </RelativeLayout>
