@@ -4,5 +4,10 @@
     <string name="app_name">Feeltheworld</string>
     <string name="menu_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="ShowAvailableSensors">ShowAvailableSensors</string>
+    <string name="SensorsMonitor">SensorsMonitor</string>
+    <string name="acceleration">acc(x,y,z):</string>
+    <string name="temperature">temperature:</string>
+    <string name="temperature_show">t_show</string>
 
 </resources>
