@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
 
     <string name="app_name">Feeltheworld</string>
@@ -11,5 +11,7 @@
     <string name="temperature_show">t_show</string>
     <string name="missing">Unavailable</string>
     <string name="gravity">Gravity</string>
+    <string name="LNG">Longitude</string>
+    <string name="LAT">Latitude</string>
 
 </resources>

@@ -1,6 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+        android:background="@drawable/d"
+    
     android:layout_height="match_parent"
     tools:context=".ShowsensorsActivity" >
 
@@ -74,6 +76,42 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="225dp"
+        android:text="@string/missing" />
+
+    <TextView
+        android:id="@+id/LAT_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LNG"
+        android:layout_below="@+id/LAT"
+        android:layout_marginTop="16dp"
+        android:text="@string/missing" />
+
+    <TextView
+        android:id="@+id/LAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/LNG"
+        android:layout_below="@+id/LNG_show"
+        android:layout_marginTop="18dp"
+        android:text="@string/LAT" />
+
+    <TextView
+        android:id="@+id/LNG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LNG_show"
+        android:layout_below="@+id/gravity_show"
+        android:layout_marginTop="24dp"
+        android:text="@string/LNG" />
+
+    <TextView
+        android:id="@+id/LNG_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gravity_show"
+        android:layout_below="@+id/LNG"
+        android:layout_marginTop="18dp"
         android:text="@string/missing" />
 
 </RelativeLayout>
